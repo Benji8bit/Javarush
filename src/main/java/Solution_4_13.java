@@ -4,7 +4,7 @@ import java.util.Scanner;
 Сумма кратных чисел
 */
 
-public class Solution {
+public class Solution_4_13 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int start = scanner.nextInt();
@@ -13,6 +13,11 @@ public class Solution {
 
         int sum = 0;
         //напишите тут ваш код
+
+        for (int i=start; i<end; i++){
+            if (i%multiple!=0) continue;
+            sum+=i;
+        }
 
         System.out.println(sum);
     }
