@@ -16,10 +16,6 @@ public class Solution_5_10 {
             array[i] = console.nextInt();
         }
 
-        for (int i = 0; i < number; i++) {
-
-        }
-
         if (number % 2 != 0) {
             for (int i = 0; i < number; i++) {
                 System.out.println(array[i]);
