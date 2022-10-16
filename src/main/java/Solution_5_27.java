@@ -1,10 +1,10 @@
 import java.util.Arrays;
 
 /*
-Галаксианские роботанки (4)
+Галаксианские роботанки (5)
 */
 
-public class Solution_5_26 {
+public class Solution_5_27 {
     public static String robotank = "☖";
     public static String empty = "_";
     public static String hit = "🎯";
