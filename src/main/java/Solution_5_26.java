@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.Objects;
 
 /*
 Галаксианские роботанки (4)
@@ -53,7 +54,7 @@ public class Solution_5_26 {
 
         for (int i = 0; i < field.length; i++) {
             for (int j = 0; j < field[i].length; j++) {
-                if ((field[i][j] == robotank) && (bombs[i][j] == 1)) {
+                if ((Objects.equals(field[i][j], robotank)) && (bombs[i][j] == 1)) {
                     field[i][j] = hit;
                     System.out.print(field[i][j]);
                 } else {
