@@ -11,6 +11,14 @@ public class Solution_5_31 {
 
     public static void main(String[] args) {
         //напишите тут ваш код
+        if ((array.length % 2) == 0) {
+            result[0] = Arrays.copyOfRange(array, 0, (array.length / 2));
+            result[1] = Arrays.copyOfRange(array, (array.length / 2), array.length);
+        } else {
+            result[0] = Arrays.copyOfRange(array, 0, (array.length / 2 + 1));
+            result[1] = Arrays.copyOfRange(array, (array.length / 2 + 1), array.length);
+        }
+
         System.out.println(Arrays.deepToString(result));
     }
 }
