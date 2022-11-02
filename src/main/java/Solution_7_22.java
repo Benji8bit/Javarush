@@ -1,10 +1,10 @@
 import java.util.Scanner;
 
 /*
-Диабло (2)
+Диабло (4)
 */
 
-public class Solution_7_20 {
+public class Solution_7_22 {
     public static String getFirstPositionPhrase = "Помоги Амиго определить, где спрятался Диабло? Введи номер позиции (1, 2, 3 или 4):";
     public static String getPositionPhrase = "Диабло не обнаружен. Давай попробуем снова. Введи номер позиции (1, 2, 3 или 4):";
     public static String findDiabloPhrase = "Амиго обнаружил Диабло.";
@@ -18,7 +18,13 @@ public class Solution_7_20 {
 
     public static void main(String[] args) {
         diabloPosition = getRandomNumber(4);
+
         findDiablo();
+
+        battle();
+
+        if (isAmigoWin()) System.out.println(winPhrase);
+        else System.out.println(loosePhrase);
     }
 
     public static int getRandomNumber(int range) {
@@ -50,6 +56,24 @@ public class Solution_7_20 {
 
     public static int diabloDefends() {
         return getRandomNumber(3);
+    }
+
+    public static void battle() {
+        while ((amigoLives != 0) && (diabloLives != 0)) {
+            amigoAttacks();
+            diabloDefends();
+            if (amigoAttacks() == diabloDefends()) {
+                System.out.println(diabloDefendPhrase);
+                amigoLostLife();
+            } else {
+                System.out.println(amigoAttackPhrase);
+                diabloLostLife();
+            }
+        }
+    }
+
+    public static boolean isAmigoWin() {
+        return diabloLives == 0;
     }
 
 }

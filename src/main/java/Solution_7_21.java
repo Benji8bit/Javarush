@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 /*
-Диабло (1)
+Диабло (3)
 */
 
 public class Solution_7_21 {
