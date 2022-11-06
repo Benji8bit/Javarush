@@ -12,8 +12,6 @@ public class Solution_8_12 {
     }
 
     public static void fillArray(Integer[] array, int value) {
-        for (int i = 0; i < array.length; i++) {
-            array[i] = value;
-        }
+        Arrays.fill(array, value);
     }
 }
