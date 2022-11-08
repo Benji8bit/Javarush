@@ -2,7 +2,6 @@
 Зелёного кардинала*/
 
 public class GalavirXIII {
-
     public static int superWeapon = Integer.MAX_VALUE;
     public double health = Double.MAX_VALUE;
 
@@ -13,5 +12,4 @@ public class GalavirXIII {
     public int attack() {
         return superWeapon;
     }
-
 }
