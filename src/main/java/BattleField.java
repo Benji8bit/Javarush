@@ -18,6 +18,14 @@ public class BattleField {
             System.out.println(galavirAttack);
             int strike = galavir.attack();
             nimrod.defend(strike);
+            if (isNimrodAlive(nimrod)) {
+                System.out.println(nimrodAttack);
+                int counterStrike = nimrod.attack();
+                galavir.defend(counterStrike);
+                if (!isGalavirAlive(galavir)) {
+                    break;
+                }
+            } else break;
         }
         while (isNimrodAlive(nimrod));
     }
