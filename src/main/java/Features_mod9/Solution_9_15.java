@@ -19,13 +19,11 @@ public class Solution_9_15 {
     public static int changeBit(int number, int bit, boolean activate) {
         //напишите тут ваш код
         if (activate) {
-
+            return number|bit;
         }
         else {
-
+            return number&~bit;
         }
-
-        return 0;
     }
 }
 
