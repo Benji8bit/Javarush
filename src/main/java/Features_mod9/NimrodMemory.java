@@ -17,9 +17,9 @@ public class NimrodMemory {
 
     public static void markForDeletion() {
         for (int i = 0; i < santaFabrica.length; i++) {
-            santaFabrica[i] = santaFabrica[i] | (1 << 13);
-            santaFabrica[i] = santaFabrica[i] | (1 << 21);
-            santaFabrica[i] = santaFabrica[i] | (1 << 29);
+            santaFabrica[i] = santaFabrica[i] | (0b100000001000000010000000000000);
+            //santaFabrica[i] = santaFabrica[i] | (1 << 21);
+            //santaFabrica[i] = santaFabrica[i] | (1 << 29);
         }
 
         for (int i = 0; i < eroticSimulators.length; i++) {
