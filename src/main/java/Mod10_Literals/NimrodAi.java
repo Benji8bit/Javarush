@@ -1,9 +1,5 @@
 package Mod10_Literals;
 
-/*
-Абордаж
-*/
-
 import java.util.Arrays;
 
 public class NimrodAi {
