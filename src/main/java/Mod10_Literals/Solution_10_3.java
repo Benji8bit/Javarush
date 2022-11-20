@@ -22,7 +22,6 @@ public class Solution_10_3 {
             decimalNumber /= 8;
         }
         return octalNumber;
-
     }
 
     public static int toDecimal(int octalNumber) {
