@@ -32,16 +32,16 @@ public class Solution_10_6 {
             binaryNumber = binString.toString();
         }
         binChars = binaryNumber.toCharArray();
-        System.out.println(Arrays.toString(binChars));
+        //System.out.println(Arrays.toString(binChars));
 
         for (int i = 0; i < binChars.length; i += 4) {
             String binQuart = String.valueOf(binChars[i]) + String.valueOf(binChars[i + 1]) + String.valueOf(binChars[i + 2]) +
                     String.valueOf(binChars[i + 3]);
-            System.out.println(binChars[i]);
-            System.out.println(binChars[i+1]);
-            System.out.println(binChars[i+2]);
-            System.out.println(binChars[i+3]);
-            System.out.println(binQuart);
+            //System.out.println(binChars[i]);
+            //System.out.println(binChars[i+1]);
+            //System.out.println(binChars[i+2]);
+            //System.out.println(binChars[i+3]);
+            //System.out.println(binQuart);
 
             switch (binQuart) {
                 case ("0000"):
@@ -95,14 +95,72 @@ public class Solution_10_6 {
                 default:
                     break;
             }
-            System.out.println(hexNumber);
+            //System.out.println(hexNumber);
         }
         return hexNumber;
     }
 
     public static String toBinary(String hexNumber) {
-        //напишите тут ваш код
-        return null;
+        String binaryNumber = "";
+        char[] hexChars = HEX.toCharArray();
+        char[] hexNumArray = hexNumber.toCharArray();
+        if ((hexNumber == null) || (hexNumber == "")) return "";
+
+        for (int i = 0; i < hexNumArray.length; i++) {
+            switch (hexNumArray[i]) {
+                case ('0'):
+                    binaryNumber = binaryNumber + "0000";
+                    break;
+                case ('1'):
+                    binaryNumber = binaryNumber + "0001";
+                    break;
+                case ('2'):
+                    binaryNumber = binaryNumber + "0010";
+                    break;
+                case ('3'):
+                    binaryNumber = binaryNumber + "0011";
+                    break;
+                case ('4'):
+                    binaryNumber = binaryNumber + "0100";
+                    break;
+                case ('5'):
+                    binaryNumber = binaryNumber + "0101";
+                    break;
+                case ('6'):
+                    binaryNumber = binaryNumber + "0110";
+                    break;
+                case ('7'):
+                    binaryNumber = binaryNumber + "0111";
+                    break;
+                case ('8'):
+                    binaryNumber = binaryNumber + "1000";
+                    break;
+                case ('9'):
+                    binaryNumber = binaryNumber + "1001";
+                    break;
+                case ('a'):
+                    binaryNumber = binaryNumber + "1010";
+                    break;
+                case ('b'):
+                    binaryNumber = binaryNumber + "1011";
+                    break;
+                case ('c'):
+                    binaryNumber = binaryNumber + "1100";
+                    break;
+                case ('d'):
+                    binaryNumber = binaryNumber + "1101";
+                    break;
+                case ('e'):
+                    binaryNumber = binaryNumber + "1110";
+                    break;
+                case ('f'):
+                    binaryNumber = binaryNumber + "1111";
+                    break;
+                default:
+                    break;
+            }
+        }
+        return binaryNumber;
     }
 }
 

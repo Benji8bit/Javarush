@@ -1,3 +1,4 @@
+/*
 package games.minesweeper;
 
 package com.javarush.games.minesweeper;
@@ -12,4 +13,4 @@ public class GameObject {
         this.y = y;
         this.isMine = isMine;
     }
-}
+}*/
