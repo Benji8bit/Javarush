@@ -1,7 +1,4 @@
-package Mod10_Literals;
-
-import java.util.Map;
-import java.util.TreeMap;
+package Mod10_Strings;
 
 public class MathExample2 {
 

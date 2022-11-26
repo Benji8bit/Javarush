@@ -1,4 +1,4 @@
-package Mod10_Literals;
+package Mod10_Strings;
 
 /*
 Литералы с плавающей точкой

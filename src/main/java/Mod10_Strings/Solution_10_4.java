@@ -1,6 +1,4 @@
-package Mod10_Literals;
-
-import java.util.regex.Pattern;
+package Mod10_Strings;
 
 /*
 Двоичный конвертер
