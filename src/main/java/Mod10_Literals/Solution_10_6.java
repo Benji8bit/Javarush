@@ -1,15 +1,12 @@
 package Mod10_Literals;
 
-import java.util.Arrays;
-import java.util.regex.Pattern;
-
 /*
 Двоично-шестнадцатеричный конвертер
 */
 
-public class Solution_10_6 {
+import java.util.Arrays;
 
-    private static final String HEX = "0123456789abcdef";
+public class Solution_10_6 {
 
     public static void main(String[] args) {
         String binaryNumber = "100111010000";
@@ -19,9 +16,8 @@ public class Solution_10_6 {
     }
 
     public static String toHex(String binaryNumber) {
-        String hexNumber = "";
-        char[] hexChars = HEX.toCharArray();
-        if ((binaryNumber == null) || (binaryNumber == "")) return "";
+        StringBuilder hexNumber = new StringBuilder();
+        if ((binaryNumber == null) || (binaryNumber.equals(""))) return "";
 
         char[] binChars = binaryNumber.toCharArray();
         String[] binString = new String[2];
@@ -29,138 +25,100 @@ public class Solution_10_6 {
         while (binChars.length % 4 != 0) {
             binString[0] = "0";
             binString[1] = binaryNumber;
-            binaryNumber = binString.toString();
+            binaryNumber = Arrays.toString(binString);
         }
         binChars = binaryNumber.toCharArray();
         //System.out.println(Arrays.toString(binChars));
 
         for (int i = 0; i < binChars.length; i += 4) {
-            String binQuart = String.valueOf(binChars[i]) + String.valueOf(binChars[i + 1]) + String.valueOf(binChars[i + 2]) +
-                    String.valueOf(binChars[i + 3]);
-            //System.out.println(binChars[i]);
-            //System.out.println(binChars[i+1]);
-            //System.out.println(binChars[i+2]);
-            //System.out.println(binChars[i+3]);
-            //System.out.println(binQuart);
+            String binQuart = binChars[i] + String.valueOf(binChars[i + 1]) + binChars[i + 2] +
+                    binChars[i + 3];
 
             switch (binQuart) {
                 case ("0000"):
-                    hexNumber = hexNumber + "0";
+                    hexNumber.append("0");
                     break;
                 case ("0001"):
-                    hexNumber = hexNumber + "1";
+                    hexNumber.append("1");
                     break;
                 case ("0010"):
-                    hexNumber = hexNumber + "2";
+                    hexNumber.append("2");
                     break;
                 case ("0011"):
-                    hexNumber = hexNumber + "3";
+                    hexNumber.append("3");
                     break;
                 case ("0100"):
-                    hexNumber = hexNumber + "4";
+                    hexNumber.append("4");
                     break;
                 case ("0101"):
-                    hexNumber = hexNumber + "5";
+                    hexNumber.append("5");
                     break;
                 case ("0110"):
-                    hexNumber = hexNumber + "6";
+                    hexNumber.append("6");
                     break;
                 case ("0111"):
-                    hexNumber = hexNumber + "7";
+                    hexNumber.append("7");
                     break;
                 case ("1000"):
-                    hexNumber = hexNumber + "8";
+                    hexNumber.append("8");
                     break;
                 case ("1001"):
-                    hexNumber = hexNumber + "9";
+                    hexNumber.append("9");
                     break;
                 case ("1010"):
-                    hexNumber = hexNumber + "a";
+                    hexNumber.append("a");
                     break;
                 case ("1011"):
-                    hexNumber = hexNumber + "b";
+                    hexNumber.append("b");
                     break;
                 case ("1100"):
-                    hexNumber = hexNumber + "c";
+                    hexNumber.append("c");
                     break;
                 case ("1101"):
-                    hexNumber = hexNumber + "d";
+                    hexNumber.append("d");
                     break;
                 case ("1110"):
-                    hexNumber = hexNumber + "e";
+                    hexNumber.append("e");
                     break;
                 case ("1111"):
-                    hexNumber = hexNumber + "f";
+                    hexNumber.append("f");
                     break;
                 default:
                     break;
             }
             //System.out.println(hexNumber);
         }
-        return hexNumber;
+        return hexNumber.toString();
     }
 
     public static String toBinary(String hexNumber) {
-        String binaryNumber = "";
-        char[] hexChars = HEX.toCharArray();
+        StringBuilder binaryNumber = new StringBuilder();
         char[] hexNumArray = hexNumber.toCharArray();
-        if ((hexNumber == null) || (hexNumber == "")) return "";
+        if (hexNumber.equals("")) return "";
 
-        for (int i = 0; i < hexNumArray.length; i++) {
-            switch (hexNumArray[i]) {
-                case ('0'):
-                    binaryNumber = binaryNumber + "0000";
-                    break;
-                case ('1'):
-                    binaryNumber = binaryNumber + "0001";
-                    break;
-                case ('2'):
-                    binaryNumber = binaryNumber + "0010";
-                    break;
-                case ('3'):
-                    binaryNumber = binaryNumber + "0011";
-                    break;
-                case ('4'):
-                    binaryNumber = binaryNumber + "0100";
-                    break;
-                case ('5'):
-                    binaryNumber = binaryNumber + "0101";
-                    break;
-                case ('6'):
-                    binaryNumber = binaryNumber + "0110";
-                    break;
-                case ('7'):
-                    binaryNumber = binaryNumber + "0111";
-                    break;
-                case ('8'):
-                    binaryNumber = binaryNumber + "1000";
-                    break;
-                case ('9'):
-                    binaryNumber = binaryNumber + "1001";
-                    break;
-                case ('a'):
-                    binaryNumber = binaryNumber + "1010";
-                    break;
-                case ('b'):
-                    binaryNumber = binaryNumber + "1011";
-                    break;
-                case ('c'):
-                    binaryNumber = binaryNumber + "1100";
-                    break;
-                case ('d'):
-                    binaryNumber = binaryNumber + "1101";
-                    break;
-                case ('e'):
-                    binaryNumber = binaryNumber + "1110";
-                    break;
-                case ('f'):
-                    binaryNumber = binaryNumber + "1111";
-                    break;
-                default:
-                    break;
+        for (char c : hexNumArray) {
+            switch (c) {
+                case ('0') -> binaryNumber.append("0000");
+                case ('1') -> binaryNumber.append("0001");
+                case ('2') -> binaryNumber.append("0010");
+                case ('3') -> binaryNumber.append("0011");
+                case ('4') -> binaryNumber.append("0100");
+                case ('5') -> binaryNumber.append("0101");
+                case ('6') -> binaryNumber.append("0110");
+                case ('7') -> binaryNumber.append("0111");
+                case ('8') -> binaryNumber.append("1000");
+                case ('9') -> binaryNumber.append("1001");
+                case ('a') -> binaryNumber.append("1010");
+                case ('b') -> binaryNumber.append("1011");
+                case ('c') -> binaryNumber.append("1100");
+                case ('d') -> binaryNumber.append("1101");
+                case ('e') -> binaryNumber.append("1110");
+                case ('f') -> binaryNumber.append("1111");
+                default -> {
+                }
             }
         }
-        return binaryNumber;
+        return binaryNumber.toString();
     }
 }
 
