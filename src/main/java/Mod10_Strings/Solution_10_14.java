@@ -23,7 +23,7 @@ public class Solution_10_14 {
             strings[i] = token;
             i++;
         }
-        return  strings;
+        return strings;
     }
 }
 
