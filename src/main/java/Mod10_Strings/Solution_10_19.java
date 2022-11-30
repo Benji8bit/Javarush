@@ -1,0 +1,20 @@
+package Mod10_Strings;
+
+/*
+Разворот строки
+*/
+
+public class Solution_10_19 {
+    public static void main(String[] args) {
+        String string = "Ходит кот задом наперед";
+        System.out.println(string);
+        System.out.println(reverseString(string));
+    }
+
+    public static String reverseString(String string) {
+        StringBuilder sb = new StringBuilder(string);
+        sb.reverse();
+        return sb.toString();
+    }
+}
+
