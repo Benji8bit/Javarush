@@ -4,8 +4,6 @@ package Mod11_Objects;
 Взлом ретранслятора
 */
 
-import java.sql.SQLOutput;
-
 public class Solution_11_4 {
 
     public static void main(String[] args) {
