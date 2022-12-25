@@ -22,6 +22,6 @@ public class Solution_13_0 {
     Long longValueBox = Long.valueOf(longValue);
     Float floatValueBox = Float.valueOf(floatValue);
     Double doubleValueBox = Double.valueOf(doubleValue);
-    Character charValueBox = Character.valueOf(charValue);
+    Character characterValueBox = Character.valueOf(charValue);
     Boolean booleanValueBox = Boolean.valueOf(booleanValue);
 }
