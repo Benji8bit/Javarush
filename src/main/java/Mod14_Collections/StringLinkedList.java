@@ -25,7 +25,20 @@ public class StringLinkedList {
     }
 
     public String get(int index) {
-        //напишите тут ваш код
+        Node current = first.next;
+        int counter = 0; // счетчик, показывающий на каком элементе цикл
+        if (index < 0 || first.next == null) { return null; } // проверка на отрицательное значение индекса и отсутствие элементов в списке
+        while (index > 0) {
+            if (counter == index) {
+                break;
+            } // если счетчик элементов равен заданному значению индекса, завершаем цикл
+            if (current == last.prev) {
+                return null;
+            } // если нода является последней, то дальше выполнять цикл нет смысла
+            current = current.next; // присваиваем ноде следующую ссылку
+            counter++;
+        }
+        return current.value;
     }
 
     public static class Node {
