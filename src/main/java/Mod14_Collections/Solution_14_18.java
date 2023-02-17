@@ -13,11 +13,19 @@ public class Solution_14_18 {
     }
 
     public static List<Board.Node> clearBoard() {
-        //напишите тут ваш код
-        return null;
+        Board board = new Board();
+        List<Board.Node> boardNodes = board.getBoardNodes();
+        for (Board.Node node : boardNodes) {
+            String str = node.getData();
+            if (str.contains("snake")) {
+                node.setData("board");
+            }
+        }
+        return boardNodes;
     }
 
     private static void printList(List<?> list) {
+
         list.forEach(element -> System.out.print(element + " "));
     }
 }
