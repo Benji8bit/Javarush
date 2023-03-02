@@ -7,7 +7,14 @@ public enum Error {
     NETWORK_ERROR(100), SYSTEM_ERROR(200), COMPILATION_ERROR(300);
 
     private final int errorCode;
-    //напишите тут ваш код
+    private static final Map<Integer, Error> errorMap = new HashMap<>();
+
+    static {
+        for (Error error :
+                Error.values()) {
+            errorMap.put(error.getErrorCode(), error);
+        }
+    }
 
     Error(int errorCode) {
         this.errorCode = errorCode;
@@ -23,8 +30,8 @@ public enum Error {
 
     public Map<Integer, Error> getErrorMap() { return errorMap; }
 
-    @Override
+    /*@Override
     public String toString() {
         return String.format("Error{ errorCode = %s }", errorCode);
-    }
+    }*/
 }
