@@ -10,20 +10,21 @@ public class Solution_14_25 {
 
     public static String getShapeNameByCountOfCorners(int countOfCorner) {
         String shape;
-        if (countOfCorner == 3) {
-            shape = "Треугольник";
-        } else if (countOfCorner == 4) {
-            shape = "Четырехугольник";
-        } else if (countOfCorner == 5) {
-            shape = "Пятиугольник";
-        } else if (countOfCorner == 6) {
-            shape = "Шестиугольник";
-        } else if (countOfCorner == 7) {
-            shape = "Семиугольник";
-        } else if (countOfCorner == 8) {
-            shape = "Восьмиугольник";
-        } else {
-            shape = "Другая фигура";
+        switch (countOfCorner) {
+            case 3:
+                shape = "Треугольник";
+            case 4:
+                shape = "Четырехугольник";
+            case 5:
+                shape = "Пятиугольник";
+            case 6:
+                shape = "Шестиугольник";
+            case 7:
+                shape = "Семиугольник";
+            case 8:
+                shape = "Восьмиугольник";
+            default:
+                shape = "Другая фигура";
         }
         return shape;
     }
