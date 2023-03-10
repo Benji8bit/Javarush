@@ -13,16 +13,22 @@ public class Solution_14_25 {
         switch (countOfCorner) {
             case 3:
                 shape = "Треугольник";
+                break;
             case 4:
                 shape = "Четырехугольник";
+                break;
             case 5:
                 shape = "Пятиугольник";
+                break;
             case 6:
                 shape = "Шестиугольник";
+                break;
             case 7:
                 shape = "Семиугольник";
+                break;
             case 8:
                 shape = "Восьмиугольник";
+                break;
             default:
                 shape = "Другая фигура";
         }
