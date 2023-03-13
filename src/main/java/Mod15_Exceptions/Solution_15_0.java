@@ -64,6 +64,17 @@ public class Solution_15_0 {
 
         user.setAge(age);
 
+        switch (user.setAge(age)) {
+            case 0:
+                break;
+            case -1:
+                System.out.println(CANNOT_BE_NEGATIVE);
+            case -2:
+                System.out.println(CANNOT_BE_TOO_BIG);
+            default:
+                System.out.println(UNKNOWN_ERROR);
+        }
+
         users.add(user);
     }
 
