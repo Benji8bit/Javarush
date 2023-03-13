@@ -44,8 +44,23 @@ public class Solution_15_0 {
         System.out.printf(INPUT_AGE, name);
         int age = Integer.parseInt(scanner.nextLine());
 
-        //напишите тут ваш код
         user.setName(name);
+
+        switch (user.setName(name)) {
+            case 0:
+                break;
+            case -1:
+                System.out.println(CANNOT_BE_NULL);
+                break;
+            case -2:
+                System.out.println(CANNOT_BE_EMPTY);
+                break;
+            case -3:
+                System.out.println(CANNOT_CONTAIN_DIGIT);
+                break;
+            default:
+                System.out.println(UNKNOWN_ERROR);
+        }
 
         user.setAge(age);
 
