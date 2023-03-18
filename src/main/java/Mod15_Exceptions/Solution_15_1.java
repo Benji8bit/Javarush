@@ -38,7 +38,12 @@ public class Solution_15_1 {
             }
 
             int studentId = Integer.parseInt(input);
-            System.out.println(ANSWERING + studentsJournal.get(studentId));
+            try {
+                System.out.println(ANSWERING + studentsJournal.get(studentId));
+            }
+            catch (Exception e) {
+                System.out.println(NOT_EXIST);
+            }
         }
     }
 }
