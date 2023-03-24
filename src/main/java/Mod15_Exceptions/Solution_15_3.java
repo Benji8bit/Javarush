@@ -37,9 +37,16 @@ public class Solution_15_3 {
             if (input.toLowerCase().equals(EXIT)) {
                 break;
             }
-
-            int studentId = Integer.parseInt(input);
-            System.out.println(ANSWERING + studentsJournal.get(studentId));
+            try {
+                int studentId = Integer.parseInt(input);
+                System.out.println(ANSWERING + studentsJournal.get(studentId));
+            }
+            catch (NumberFormatException nfe) {
+                System.out.println(INTEGER_REQUIRED);
+            }
+            catch (ArrayIndexOutOfBoundsException oobe) {
+                System.out.println(NOT_EXIST);
+            }
         }
     }
 }
