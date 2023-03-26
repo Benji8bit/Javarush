@@ -12,7 +12,7 @@ public class Solution_15_4 {
 
     public static void startTest() {
         try {
-            System.out.println(2 / 0);
+            System.out.println(2 / 2);
             question2();
         } catch (ArithmeticException e) {
             e.printStackTrace();
@@ -21,7 +21,7 @@ public class Solution_15_4 {
 
     public static void question2() {
         try {
-            System.out.println((char[]) null);
+            System.out.println((char) 1);
             question3();
         } catch (NullPointerException e) {
             e.printStackTrace();
@@ -31,7 +31,7 @@ public class Solution_15_4 {
     public static void question3() {
         char[] array = {'T', 'e', 's', 't',};
         try {
-            System.out.println(array[4]);
+            System.out.println(array[3]);
             question4();
         } catch (ArrayIndexOutOfBoundsException e) {
             e.printStackTrace();
@@ -40,7 +40,7 @@ public class Solution_15_4 {
 
     public static void question4() {
         try {
-            int num = Integer.parseInt("number");
+            int num = Integer.parseInt("1");
             System.out.println("All tests passed. You may go.");
         } catch (NumberFormatException e) {
             e.printStackTrace();
