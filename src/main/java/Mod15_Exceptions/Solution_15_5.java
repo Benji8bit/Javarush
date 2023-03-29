@@ -28,7 +28,8 @@ class Solution_15_5 {
         try {
             buyElephant(answer, scanner);
         } catch (Exception e) {
-            //напишите тут ваш код
+            System.out.println(answer);
+            throw e;
         }
     }
 }
