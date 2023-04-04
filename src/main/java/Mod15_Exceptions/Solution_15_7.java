@@ -40,5 +40,17 @@ public class Solution_15_7 {
         }
     }
 
-    //напишите тут ваш код
+    public static void checkAnswers(int answer_case) {
+        throw new WrongAnswerException();
+        switch (answer_case) {
+            case 1:
+                System.out.println();
+            case 2:
+                System.out.println();
+            case 3:
+                System.out.println();
+            case 4:
+                System.out.println();
+        }
+    }
 }
