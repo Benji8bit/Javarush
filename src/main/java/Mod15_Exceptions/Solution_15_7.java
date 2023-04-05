@@ -41,16 +41,21 @@ public class Solution_15_7 {
     }
 
     public static void checkAnswers(int answer_case) {
-        throw new WrongAnswerException();
+        String answer_case_string = String.valueOf(answer_case);
+        //throw new WrongAnswerException(answer_case_string);
         switch (answer_case) {
             case 1:
-                System.out.println();
+                System.out.println("Не совсем...Даём тебе еще один шанс.");
+                break;
             case 2:
-                System.out.println();
+                System.out.println("Я вижу ты любишь играть с огнём!");
+                break;
             case 3:
-                System.out.println();
+                System.out.println("Еще один такой ответ, и мы сдадим тебя на металолом!");
+                break;
             case 4:
-                System.out.println();
+                System.out.println("Правильный ответ.");
+                break;
         }
     }
 }
