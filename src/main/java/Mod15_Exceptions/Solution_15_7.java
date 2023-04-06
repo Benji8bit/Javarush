@@ -40,19 +40,14 @@ public class Solution_15_7 {
         }
     }
 
-    public static void checkAnswers(int answer_case) {
-        String answer_case_string = String.valueOf(answer_case);
-        //throw new WrongAnswerException(answer_case_string);
+    public static void checkAnswers(int answer_case) throws WrongAnswerException {
         switch (answer_case) {
             case 1:
-                System.out.println("Не совсем...Даём тебе еще один шанс.");
-                break;
+                throw new WrongAnswerException("Не совсем...Даём тебе еще один шанс.");
             case 2:
-                System.out.println("Я вижу ты любишь играть с огнём!");
-                break;
+                throw new WrongAnswerException("Я вижу ты любишь играть с огнём!");
             case 3:
-                System.out.println("Еще один такой ответ, и мы сдадим тебя на металолом!");
-                break;
+                throw new WrongAnswerException("Еще один такой ответ, и мы сдадим тебя на металолом!");
             case 4:
                 System.out.println("Правильный ответ.");
                 break;
