@@ -6,7 +6,7 @@ package Mod15_Exceptions;
 
 public class Solution_15_9 {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         generateLuckyNumber();
     }
 
