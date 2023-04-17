@@ -15,9 +15,16 @@ public class Solution_15_10 {
     }
 
     static void copyFile(String sourceFile, String destinationFile) {
-        FileUtils.readFile(sourceFile);
-        FileUtils.writeFile(destinationFile);
-        //напишите тут ваш код
+        try {
+            FileUtils.readFile(sourceFile);
+        } catch (FileNotFoundException fnfe) {
+            throw new RuntimeException(fnfe);
+        }
+        try {
+            FileUtils.writeFile(destinationFile);
+        } catch (FileSystemException fse) {
+            throw new RuntimeException(fse);
+        }
     }
 }
 
