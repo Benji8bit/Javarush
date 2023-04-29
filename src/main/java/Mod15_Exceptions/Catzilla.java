@@ -40,7 +40,8 @@ public class Catzilla {
 
         for (Exception exception : exceptionRockets) {
             Thread.sleep(100);
-            System.out.println(exception.getMessage());
+            //System.out.println(exception.getMessage());
+            exception.printStackTrace();
         }
         System.out.println("Rocket test completed.");
     }
