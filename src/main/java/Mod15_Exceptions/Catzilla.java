@@ -16,8 +16,11 @@ public class Catzilla {
     public void overclockReactor() throws InterruptedException {
         System.out.println("Overclocking reactor...");
         this.fusionReactorCores = 10;
-        overclockReactor();
-        System.out.printf("Reactor has been overclocked. %d cores are ready.\n", this.fusionReactorCores);
+        try {
+            overclockReactor();
+        } catch (StackOverflowError soe) {
+            System.out.printf("Reactor has been overclocked. %d cores are ready.\n", this.fusionReactorCores);
+        }
     }
 
     public void enlargeFangs() throws InterruptedException {
