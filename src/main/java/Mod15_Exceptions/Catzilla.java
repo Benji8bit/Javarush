@@ -4,7 +4,7 @@ import java.util.List;
 
 public class Catzilla {
     private int fusionReactorCores = 5;
-    private Integer fangStrength = null;
+    private int fangStrength = 5;
     private int[] clawsPerPaw = {5, 5, 4, 4};
     private List<Exception> exceptionRockets = List.of(new Exception("Take that!"), new Exception("Catzilla power!"), new Exception("You messed with the wrong cat!"),
             new Exception("You better not get up again!"), new Exception("Bang!"), new Exception("Kapaow!"),
@@ -16,16 +16,13 @@ public class Catzilla {
     public void overclockReactor() throws InterruptedException {
         System.out.println("Overclocking reactor...");
         this.fusionReactorCores = 10;
-        try {
-            overclockReactor();
-        } catch (StackOverflowError soe) {
-            System.out.printf("Reactor has been overclocked. %d cores are ready.\n", this.fusionReactorCores);
-        }
+        //overclockReactor();
+        System.out.printf("Reactor has been overclocked. %d cores are ready.\n", this.fusionReactorCores);
     }
 
     public void enlargeFangs() throws InterruptedException {
         System.out.println("Initializing tungsten fangs...");
-        this.fangStrength.intValue(10);
+        this.fangStrength = 10;
         System.out.println("Fangs are ready with strength 10.");
     }
 
