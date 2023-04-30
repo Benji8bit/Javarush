@@ -31,7 +31,7 @@ public class Catzilla {
 
         for (int i = 0; i < clawsPerPaw.length; i++) {
             clawsPerPaw[i] += 2;
-            System.out.printf("Paw %d is ready with %d claws.\n", i, clawsPerPaw[i]);
+            System.out.printf("Paw %d is ready with %d claws.\n", i+1, clawsPerPaw[i]);
         }
     }
 
